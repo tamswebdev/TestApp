@@ -1,0 +1,10 @@
+{
+    "cordova-plugin-hostedwebapp": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-hostedwebapp"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

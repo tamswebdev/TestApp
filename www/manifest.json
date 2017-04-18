@@ -1,0 +1,8 @@
+{
+	"name": "Test App",
+	"short_name": "TestApp",
+	"start_url": "https://intranetqa.tams.com/VirtualApps/busopswebs/TAMSULApps/index.html",
+	"mjs_api_access": [
+		{ "match": "*", "access": "cordova", "platform": "ios,windows,android" }
+	]
+}
