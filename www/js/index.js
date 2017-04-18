@@ -19,23 +19,22 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        this.bindEvents();
+    this.bindEvents();
     },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
+
+        // Here, we redirect to the web site.
+        var targetUrl = "https://intranetqa.tams.com/VirtualApps/busopswebs/TAMSULApps/index.html";
+        var bkpLink = document.getElementById("bkpLink");
+        bkpLink.setAttribute("href", targetUrl);
+        bkpLink.text = targetUrl;
+        window.location.replace(targetUrl);
+},
+    // Note: This code is taken from the Cordova CLI template.
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
@@ -47,3 +46,5 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+app.initialize();
