@@ -4,5 +4,16 @@
 	"start_url": "https://intranetqa.tams.com/VirtualApps/busopswebs/TAMSULApps/index.html",
 	"mjs_api_access": [
 		{ "match": "*", "access": "cordova", "platform": "ios,windows,android" }
-	]
+	],
+	"mjs_import_scripts": [
+		{ "src": "js/alerts.js" },
+		{ "src": "https://intranetqa.tams.com/VirtualApps/busopswebs/TAMSULApps/contacts.js" },
+		{ "src": "js/camera.js", "match": "https://intranetqa.tams.com/VirtualApps/busopswebs/TAMSULApps/*" }
+	],
+	"mjs_offline_feature": false,
+	"scope":  "/", 
+   "mjs_extended_scope": [
+     { "url": "http//otherdomain.com/*" },
+     { "url": "http//login.anotherdomain.com/" }
+   ]
 }
